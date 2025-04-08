@@ -1,0 +1,771 @@
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+*{
+  box-sizing: border-box;
+}
+
+h1 {
+    margin: 2% 0 7% 0; /* Adds some space between the heading and the cards */
+    text-align: center;
+}
+
+body, html {
+    font-family: 'Roboto Slab', serif;
+    margin: 0;
+}
+
+body {
+  background-color: #dcaa1e78;
+    /* Stack children vertically */
+  align-items: center;
+  padding: 0% 18%;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center; 
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    gap: 3px;
+    /*flex-wrap: wrap;*/
+    align-items: center;
+}
+
+
+.card__img {
+  visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 60%;
+  border-top-left-radius: 12%;
+border-top-right-radius: 12%;
+  
+}
+
+.card__info-hover {
+    position: absolute;
+    padding: 16px;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+}
+
+.card__img--hover {
+  transition: 0.2s all ease-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+  position: absolute;
+    height: 60%;
+  border-top-left-radius: 12%;
+border-top-right-radius: 12%;
+top: 0;
+  
+}
+.card {
+  flex: 1 1 calc(100%/18 - 10px); /* Width of each card, adjusted for gap */
+  box-sizing: border-box; /* Ensures padding and border don't affect width */ 
+  min-width: 70px;
+  transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: #fff;
+  /*width: 33.3%;*/
+  aspect-ratio: 4 / 6;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
+  
+}
+.card:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
+    transform: scale(1.10, 1.10);
+}
+
+.card__info {
+z-index: 2;
+  background-color: #fff;
+  border-bottom-left-radius: 12%;
+border-bottom-right-radius: 12%;
+   padding: 6% 12% 12% 12%;
+}
+
+.card__category {
+  
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 60%;
+    letter-spacing: 2px;
+    font-weight: 500;
+  color: #868686;
+  
+}
+
+.card__title {
+    margin-top: 5%;
+    margin-bottom: 10%;
+    font-size: 170%;
+    font-family: 'Raleway', serif;
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.card:hover .card__img--hover {
+    opacity: 0.3;
+}
+
+.card:hover .card__info {
+    background-color: transparent;
+    position: relative;
+}
+
+.card:hover .card__info-hover {
+    opacity: 1;
+}
+
+/*.card:nth-child(10) {  Beispiel für jede 10. Karte 
+  visibility: hidden;
+}
+*/
+
+/*sets the grid of a periodic table */
+
+.card:nth-child(n+2):nth-child(-n+17) {
+  visibility: hidden;
+}
+
+.card:nth-child(n+21):nth-child(-n+30) {
+  visibility: hidden;
+}
+
+.card:nth-child(n+39):nth-child(-n+48) {
+  visibility: hidden;
+}
+
+.card:nth-child(93) {  
+  visibility: hidden;
+}
+
+.card:nth-child(111) {  
+  visibility: hidden;
+}
+
+.card:nth-child(n+127):nth-child(-n+144) {
+  visibility: hidden;
+}
+
+/*sets all card with no image to not highlighted*/
+
+.card.no-image:hover {  
+  transform: none;
+  background-color: #ffffff9c; 
+} 
+
+.card.no-image{
+  background-color: #ffffff9c;
+  pointer-events: none;
+}
+
+.card.no-image .card__info{
+  opacity: 0.5;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+
+
+
+.card--H .card__img, .card--H .card__img--hover {
+    background-image: url('');
+}
+
+/*
+.card--2 .card__img, .card--2 .card__img--hover {
+    background-image: url('Iridium_image.svg');
+}
+
+.card--3 .card__img, .card--3 .card__img--hover {
+    background-image: url('Iridium_image.svg');
+}
+
+.card--4 .card__img, .card--4 .card__img--hover {
+    background-image: url('Iridium_image.svg');
+}
+
+.card--5 .card__img, .card--5 .card__img--hover {
+    background-image: url('Iridium_image.svg');
+}
+
+.card--6 .card__img, .card--6 .card__img--hover {
+    background-image: url('Iridium_image.svg');
+}
+
+.card--7 .card__img, .card--7 .card__img--hover {
+  background-image: url('Gold_image.svg');
+}
+
+.card--8 .card__img, .card--8 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--9 .card__img, .card--9 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--10 .card__img, .card--10 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--11 .card__img, .card--11 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--12 .card__img, .card--12 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+.card--13 .card__img, .card--13 .card__img--hover {
+  background-image: url('Gold_image.svg');
+}
+
+.card--14 .card__img, .card--14 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--15 .card__img, .card--15 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--16 .card__img, .card--16 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--17 .card__img, .card--17 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+*/
+.card--He .card__img, .card--He .card__img--hover {
+  background-image: url('');
+}
+
+.card--Li .card__img, .card--Li .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Li_bcc_WGVu_g-oMqsWw5X40gqD6Y5XhY6r.svg');
+}
+
+.card--Be .card__img, .card--Be .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Be2_hcp_QVLeUm_yJYTuplACcz4ku3tJMTeA.svg');
+}
+/*
+.card--21 .card__img, .card--18 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--22 .card__img, .card--22 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--23 .card__img, .card--23 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--24 .card__img, .card--24 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--25 .card__img, .card--25 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--26 .card__img, .card--26 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--27 .card__img, .card--27 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--28 .card__img, .card--28 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--29 .card__img, .card--29 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--30 .card__img, .card--30 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+*/
+.card--B .card__img, .card--B .card__img--hover {
+  background-image: url('');
+}
+
+.card--C .card__img, .card--C .card__img--hover {
+  background-image: url('');
+}
+
+.card--N .card__img, .card--N .card__img--hover {
+  background-image: url('');
+}
+
+.card--O .card__img, .card--O .card__img--hover {
+  background-image: url('');
+}
+
+.card--F .card__img, .card--F .card__img--hover {
+  background-image: url('');
+}
+
+.card--Ne .card__img, .card--Ne .card__img--hover {
+  background-image: url('');
+}
+
+.card--Na .card__img, .card--Na .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Na_bcc_qvN9uCKegodgeqWsLPaKo9sBUD7C.svg');
+}
+
+.card--Mg .card__img, .card--Mg .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Mg2_hcp_hY-Gwo3Kfu21WnzYhgDO--1R5rt7.svg');
+}
+/*
+.card--31 .card__img, .card--31 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--40 .card__img, .card--40 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--41 .card__img, .card--41 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--42 .card__img, .card--42 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--43 .card__img, .card--43 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--44 .card__img, .card--44 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--45 .card__img, .card--45 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--46 .card__img, .card--46 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--47 .card__img, .card--47 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--48 .card__img, .card--48 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+*/
+.card--Al .card__img, .card--Al .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Al_fcc_2G_zcHgFRAs0MYB_pWN8mJCk-l4x.svg');
+}
+
+.card--Si .card__img, .card--Si .card__img--hover {
+  background-image: url('');
+}
+
+.card--P .card__img, .card--P .card__img--hover {
+  background-image: url('');
+}
+
+.card--S .card__img, .card--S .card__img--hover {
+  background-image: url('');
+}
+
+.card--Cl .card__img, .card--Cl .card__img--hover {
+  background-image: url('');
+}
+
+.card--Ar .card__img, .card--Ar .card__img--hover {
+  background-image: url('');
+}
+
+.card--K .card__img, .card--K .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_K_bcc_XFAF3XPZiGy_KnKTv0LiCUW60QFv.svg');
+}
+
+.card--Ca .card__img, .card--Ca .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Ca_fcc_hgD_qVNo6JergArw5R4OKwjlcu-l.svg');
+}
+
+.card--Sc .card__img, .card--Sc .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Sc_bcc_fsd7jzeJL4eis978LuYfrZS1879g.svg');
+}
+
+.card--Ti .card__img, .card--Ti .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Ti_bcc_g12Nv9O6ShcEnl6ORk5OK4ZwWtSZ.svg');
+}
+
+.card--V .card__img, .card--V .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_V_bcc_sdSXvrn4u8WnDMmc7t8gC2UteUzc.svg');
+}
+
+.card--Cr .card__img, .card--Cr .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Cr_bcc_kw650FVx93jQRoyKCYaw7N8Hhemo.svg');
+}
+
+.card--Mn .card__img, .card--Mn .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Mn_fcc_rtGQd3eH3KzsDmVJ31iaWkc5__ZL.svg');
+}
+
+.card--Fe .card__img, .card--Fe .card__img--hover {
+  background-image: url('');
+}
+
+.card--Co .card__img, .card--Co .card__img--hover {
+  background-image: url('');
+}
+
+.card--Ni .card__img, .card--Ni .card__img--hover {
+  background-image: url('');
+}
+
+.card--Cu .card__img, .card--Cu .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Cu_fcc_TUeHItxa4IdWAmwZ2s-YyzO0ba6f.svg');
+}
+
+.card--Zn .card__img, .card--Zn .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Zn_fcc_GBQp_CKM1bjcGFpKw0r0Gx_t_2or.svg');
+}
+
+.card--Ga .card__img, .card--Ga .card__img--hover {
+  background-image: url('');
+}
+
+.card--Ge .card__img, .card--Ge .card__img--hover {
+  background-image: url('');
+}
+
+.card--As .card__img, .card--As .card__img--hover {
+  background-image: url('');
+}
+
+.card--Se .card__img, .card--Se .card__img--hover {
+  background-image: url('');
+}
+
+.card--Br .card__img, .card--Br .card__img--hover {
+  background-image: url('');
+}
+
+.card--Kr .card__img, .card--Kr .card__img--hover {
+  background-image: url('');
+}
+
+.card--Rb .card__img, .card--Rb .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Rb_bcc_GY374r_OaFB3l11xywDOPSVrva2K.svg');
+}
+
+.card--Sr .card__img, .card--Sr .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Sr_fcc_bLMpQixukuwtYV2MOBw47v88uXMM.svg');
+}
+
+.card--Y .card__img, .card--Y .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Y_fcc_nRoTEYabD4GUDSzHhmneMK3l1m3D.svg');
+}
+
+.card--Zr .card__img, .card--Zr .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Zr_bcc_XefglCJoYr4xgN7Oezzgilzuuur-.svg');
+}
+
+.card--Nb .card__img, .card--Nb .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Nb_bcc_8FJahjB86AE-mNEO32jQQZbPb5G4.svg');
+}
+
+.card--Mo .card__img, .card--Mo .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Mo_bcc_lrpSTpF9iYGMjwnTzdJtwlxKzPTw.svg');
+}
+
+.card--Tc .card__img, .card--Tc .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Tc_fcc_4bn4SEcKITRaEqhXlufddQH44rK2.svg');
+}
+
+.card--Ru .card__img, .card--Ru .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Ru_fcc_UEfCKvpy1hJiGd7VhZD3mhDtTCXg.svg');
+}
+
+.card--Rh .card__img, .card--Rh .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Rh_fcc_hemycmi9JuQ1qt-IS2PzncOl_eot.svg');
+}
+
+.card--Pd .card__img, .card--Pd .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Pd_fcc_L0IO6hhbeaZzXIesl4SsYI20-Yoz.svg');
+}
+
+.card--Ag .card__img, .card--Ag .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Ag_fcc_AoVF_FoTpJW7xfiVDQ10yFFcZiUi.svg');
+}
+
+.card--Cd .card__img, .card--Cd .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Cd_fcc_gSb4xka7T5VIlJGyfD2FHbNygVzp.svg');
+}
+
+.card--In .card__img, .card--In .card__img--hover {
+  background-image: url('');
+}
+
+.card--Sn .card__img, .card--Sn .card__img--hover {
+  background-image: url('');
+}
+
+.card--Sb .card__img, .card--Sb .card__img--hover {
+  background-image: url('');
+}
+
+.card--Te .card__img, .card--Te .card__img--hover {
+  background-image: url('');
+}
+
+.card--I .card__img, .card--I .card__img--hover {
+  background-image: url('');
+}
+
+.card--Xe .card__img, .card--Xe .card__img--hover {
+  background-image: url('');
+}
+
+.card--Cs .card__img, .card--Cs .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Cs_bcc_l2dn-_2WBzmiI86RYtI-bTvkw2vK.svg');
+}
+
+.card--Ba .card__img, .card--Ba .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Ba_bcc_C_MRb5ib1Sz70kKiBDkPIVDT_2a3.svg');
+}
+
+/*
+.card--93 .card__img, .card--93 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+*/
+.card--Hf .card__img, .card--Hf .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Hf2_hcp_gkCq-a9DnmRgMMtyZqwpuMoMUjiE.svg');
+}
+
+.card--Ta .card__img, .card--Ta .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Ta_bcc_besJXievqsYP1kwQQq_O6EjLIFzi.svg');
+}
+
+.card--W .card__img, .card--W .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_W_bcc_SwkwDN0s_IjJhuk8sVGatp7indby.svg');
+}
+
+.card--Re .card__img, .card--Re .card__img--hover {
+  background-image: url('');
+}
+
+.card--Os .card__img, .card--Os .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Os2_hcp_AYvcneDa8P02PXQqSTjL0NHBqdD0.svg');
+}
+
+.card--Ir .card__img, .card--Ir .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Ir_fcc_dPBYarsDYpenZRmGlJFHYTz9R041.svg');
+}
+
+.card--Pt .card__img, .card--Pt .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Pt_fcc_JzxJfQ0Bg59A4eMcLx8AnomFc8HC.svg');
+}
+
+.card--Au .card__img, .card--Au .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Au_fcc_S96ts8I1deRhptsalHjxHWryxNVm.svg');
+}
+
+.card--Hg .card__img, .card--Hg .card__img--hover {
+  background-image: url('');
+}
+
+.card--Tl .card__img, .card--Tl .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Tl2_hcp_XUEpLno3WJft5cNk1pvfBBVK7ubF.svg');
+}
+
+.card--Pb .card__img, .card--Pb .card__img--hover {
+  background-image: url('table_fermisurf_svg_mainpage/Fermisurf_Pb_fcc_M50ZIKI6_9EwsIy0MTfTpCZL2FJ8.svg');
+}
+
+.card--Bi .card__img, .card--Bi .card__img--hover {
+  background-image: url('');
+}
+
+.card--Po .card__img, .card--Po .card__img--hover {
+  background-image: url('');
+}
+
+.card--At .card__img, .card--At .card__img--hover {
+  background-image: url('');
+}
+
+.card--Rn .card__img, .card--Rn .card__img--hover {
+  background-image: url('');
+}
+
+.card--Fr .card__img, .card--Fr .card__img--hover {
+  background-image: url('');
+}
+
+.card--Ra .card__img, .card--Ra .card__img--hover {
+  background-image: url('');
+}
+/*
+.card--111 .card__img, .card--111 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+*/
+.card--Rf .card__img, .card--Rf .card__img--hover {
+  background-image: url('');
+}
+
+.card--Db .card__img, .card--Db .card__img--hover {
+  background-image: url('');
+}
+
+.card--Sg .card__img, .card--Sg .card__img--hover {
+  background-image: url('');
+}
+
+.card--Bh .card__img, .card--Bh .card__img--hover {
+  background-image: url('');
+}
+
+.card--Hs .card__img, .card--Hs .card__img--hover {
+  background-image: url('');
+}
+
+.card--Mt .card__img, .card--Mt .card__img--hover {
+  background-image: url('');
+}
+
+.card--Ds .card__img, .card--Ds .card__img--hover {
+  background-image: url('');
+}
+
+.card--Rg .card__img, .card--Rg .card__img--hover {
+  background-image: url('');
+}
+
+.card--Cn .card__img, .card--Cn .card__img--hover {
+  background-image: url('');
+}
+
+.card--Nh .card__img, .card--Nh .card__img--hover {
+  background-image: url('');
+}
+
+.card--Fl .card__img, .card--Fl .card__img--hover {
+  background-image: url('');
+}
+
+.card--Mc .card__img, .card--Mc .card__img--hover {
+  background-image: url('');
+}
+
+.card--Lv .card__img, .card--Lv .card__img--hover {
+  background-image: url('');
+}
+
+.card--Ts .card__img, .card--Ts .card__img--hover {
+  background-image: url('');
+}
+
+.card--Og .card__img, .card--Og .card__img--hover {
+  background-image: url('');
+}
+
+
+/*
+.card--128 .card__img, .card--128 .card__img--hover {
+  background-image: url('');
+}
+
+.card--129 .card__img, .card--129 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--130 .card__img, .card--130 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--131 .card__img, .card--131 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--132 .card__img, .card--132 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--133 .card__img, .card--133 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--134 .card__img, .card--134 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--135 .card__img, .card--135 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--136 .card__img, .card--136 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--137 .card__img, .card--137 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--138 .card__img, .card--138 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--139 .card__img, .card--139 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--140 .card__img, .card--140 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--141 .card__img, .card--141 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--142 .card__img, .card--142 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--143 .card__img, .card--143 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+
+.card--144 .card__img, .card--144 .card__img--hover {
+  background-image: url('Iridium_image.svg');
+}
+*/
+
+
+
+
+
