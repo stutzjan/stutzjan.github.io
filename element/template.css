@@ -33,15 +33,15 @@ body {
 }
 
 .card--1 .card__img, .card--1 .card__img--hover {
-    background-image: url('Fermisurf_Ba_bcc_PBE_VqfYXLkC0ZcUVvyTCV4YnI6cf5Bz.svg');
+    background-image: url('.svg');
 }
 
 .card--2 .card__img, .card--2 .card__img--hover {
-    background-image: url('Fermisurf_Ba_bcc_PBEsol_PaOlOHKArhXp-MzWbVReZfk8cjha.svg');
+    background-image: url('.svg');
 }
 
 .card--3 .card__img, .card--3 .card__img--hover {
-  background-image: url('Fermisurf_Ba_bcc_C_MRb5ib1Sz70kKiBDkPIVDT_2a3.svg');
+  background-image: url('.svg');
 }
 
 
