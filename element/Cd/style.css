@@ -9,8 +9,8 @@ body, html {
   font-family: 'Roboto Slab', serif; 
   width: 100%;
   height: auto;
-  padding-left: 0.5rem;
-  padding-right: 1rem
+  padding-left: 1rem;
+  padding-right: 1.6rem
 }
 
 body {
@@ -88,6 +88,8 @@ background-image: url('.svg');
   
 }
 .card {
+  container-type: inline-size;
+  container-name: card;  
   box-sizing: border-box; /* Ensures padding and border don't affect width */ 
   transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
   background-color: #fff;
@@ -104,34 +106,35 @@ background-image: url('.svg');
 }
 
 .card__info {
-z-index: 2;
   background-color: #fff;
-  border-bottom-left-radius: clamp(0.1rem, 1.2rem, 2rem);
-border-bottom-right-radius: clamp(0.1rem, 1.2rem, 2rem);
-   padding: clamp(1.1rem, 1.2vw, 1.3rem) clamp(1.1rem, 1.2vw, 1.3rem) clamp(1.1rem, 1.2vw, 1.3rem) clamp(1.1rem, 1.2vw, 1.3rem);
-width: 100%;
-height: 40%;
+  padding: 2cqw 2cqw 10cqw 10cqw;
+  width: 100%;
+  height: 40%;
 }
 
 .card__category {
     font-family: 'Raleway', sans-serif;
-    font-size: clamp(1.1rem, 1.2vw, 1.3rem);
+    font-size: 10cqw;
     letter-spacing: 0.1rem;
     font-weight: 500;
   color: #868686;
+  position: absolute
 }
 
 .card__title {
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin: 0rem;
+    padding-top: 15cqw;
+    padding-bottom: 7cqw;
     font-family: 'Roboto Slab', serif;
-    font-size: clamp(0.9rem, 1.0vw, 1.1rem);
+    font-size: 8cqw;
 }
 
 .card__by {
-    font-size: clamp(0.5rem, 0.6vw, 0.7rem);
+    /*font-size: clamp(0.5rem, 0.6vw, 0.7rem);*/
     font-family: 'Raleway', sans-serif;
+    font-size: 5cqw;
     font-weight: 500;
+    position: absolute
 }
 
 .card__author {
@@ -175,47 +178,26 @@ height: 40%;
   @media only screen and (max-width: 600px) {
     .cards {
       grid-template-columns: repeat(1, 1fr);
+      gap: 3rem;
     }
-    .card__title {
-      font-size: clamp(0.9rem, 7vw, 11rem);
-    }
-    .card__category {
-      font-size: clamp(1.1rem, 9vw, 13rem);
-    }
-    .card__by {
-      font-size: clamp(0.5rem, 3.5vw, 7rem);
+    body, html {
+      padding-top: 1rem
     }
   }
 
   @media only screen and (min-width: 600px) {
     .cards {
       grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
     }
   
-    .card__title {
-      font-size: clamp(0.9rem, 4vw, 11rem);
-    }
-    .card__category {
-      font-size: clamp(1.1rem, 4.8vw, 13rem);
-    }
-    .card__by {
-      font-size: clamp(0.5rem, 2.4vw, 7rem);
-    }
 }
 
   @media only screen and (min-width: 900px) {
     .cards {
       grid-template-columns: repeat(3, 1fr);
     }
-    .card__title {
-      font-size: clamp(0.9rem, 1.0vw, 1.1rem);
-    }
-    .card__category {
-      font-size: clamp(1.1rem, 1.2vw, 1.3rem);
-    }
-    .card__by {
-      font-size: clamp(0.5rem, 0.6vw, 0.7rem);
-    }
   }
+
   
   
