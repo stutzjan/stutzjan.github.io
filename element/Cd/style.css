@@ -10,7 +10,8 @@ body, html {
   width: 100%;
   height: auto;
   padding-left: 1rem;
-  padding-right: 1.6rem
+  padding-right: 1.6rem;
+  padding-top: 2.5rem;
 }
 
 body {
@@ -26,9 +27,7 @@ body {
   gap: 1.5rem;
   flex-wrap: wrap;
   align-items: center;
-  width: clamp(5rem, 55rem, 200rem); 
-  padding: 5% 0% 1% 0%
-   
+  width: clamp(5rem, 55rem, 200rem);
 }
 
 .card--1 .card__img, .card--1 .card__img--hover {
@@ -180,18 +179,14 @@ background-image: url('.svg');
       grid-template-columns: repeat(1, 1fr);
       gap: 3rem;
     }
-    body, html {
-      padding-top: 1rem
-    }
   }
 
   @media only screen and (min-width: 600px) {
     .cards {
       grid-template-columns: repeat(2, 1fr);
       gap: 2.5rem;
-    }
-  
-}
+    }    
+  }
 
   @media only screen and (min-width: 900px) {
     .cards {
