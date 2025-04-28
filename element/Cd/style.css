@@ -28,31 +28,31 @@ body {
   gap: 1.5rem;
   flex-wrap: wrap;
   align-items: center;
-  width: clamp(5rem, 55rem, 200rem);
+  width: clamp(5rem, 70rem, 200rem); /*55rem*/
 }
 
 .card--1 .card__img, .card--1 .card__img--hover {
-    background-image: url('Fermisurf_Cd_fcc_PBE_APMLgsdCYGMONtuAOqqbmCO7CS-o.svg');
+    background-image: url('SVG/Fermisurf_Cd_fcc_PBE_APMLgsdCYGMONtuAOqqbmCO7CS-o.svg');
 }
 
 .card--2 .card__img, .card--2 .card__img--hover {
-    background-image: url('Fermisurf_Cd_fcc_PBEsol_5rKaVVOqCs8Z-ParfXY-jCxPydID.svg');
+    background-image: url('SVG/Fermisurf_Cd_fcc_PBEsol_5rKaVVOqCs8Z-ParfXY-jCxPydID.svg');
 }
 
 .card--3 .card__img, .card--3 .card__img--hover {
-  background-image: url('Fermisurf_Cd_fcc_gSb4xka7T5VIlJGyfD2FHbNygVzp.svg');
+  background-image: url('SVG/Fermisurf_Cd_fcc_gSb4xka7T5VIlJGyfD2FHbNygVzp.svg');
 }
 
 .card--4 .card__img, .card--4 .card__img--hover {
-  background-image: url('.svg');
+  background-image: url('SVG/Fermisurf_Cd2_hcp_PBE_CFWkgMxJxfx_TBF1R0cgjoqxDIUI.svg');
 }
 
 .card--5 .card__img, .card--5 .card__img--hover {
-  background-image: url('.svg');
+  background-image: url('SVG/Fermisurf_Cd2_hcp_PBEsol_WBKMMvPrUkIHWD9uvAQEr2hJPO55.svg');
 }
 
 .card--6 .card__img, .card--6 .card__img--hover {
-background-image: url('.svg');
+background-image: url('SVG/Fermisurf_Cd2_hcp_8KY_OZM8GeS6EX1Vi4c9wXwqKs16.svg');
 }
 
 
