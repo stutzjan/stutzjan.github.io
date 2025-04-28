@@ -28,7 +28,7 @@ body {
   gap: 1.5rem;
   flex-wrap: wrap;
   align-items: center;
-  width: clamp(5rem, 70rem, 200rem); /*55rem*/
+  width: clamp(5rem, 55rem, 200rem);
 }
 
 .card--1 .card__img, .card--1 .card__img--hover {
