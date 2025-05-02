@@ -28,21 +28,20 @@ body {
   gap: 1.5rem;
   flex-wrap: wrap;
   align-items: center;
-  width: clamp(5rem, 70rem, 200rem);
+  width: clamp(5rem, 70rem, 200rem); /*55rem*/
 }
 
 .card--1 .card__img, .card--1 .card__img--hover {
-    background-image: url('Fermisurf_Cd_fcc_PBE_APMLgsdCYGMONtuAOqqbmCO7CS-o.svg');
+    background-image: url('SVG/Fermisurf_Cr_bcc_PBE_vgdbDsL7J82DW4O3N_jiH7YQHZ2p.svg');
 }
 
 .card--2 .card__img, .card--2 .card__img--hover {
-    background-image: url('Fermisurf_Cd_fcc_PBEsol_5rKaVVOqCs8Z-ParfXY-jCxPydID.svg');
+    background-image: url('SVG/Fermisurf_Cr_bcc_PBEsol_zyAjySEu6Wc1jssAiKglpC8qcoYe.svg');
 }
 
 .card--3 .card__img, .card--3 .card__img--hover {
-  background-image: url('Fermisurf_Cd_fcc_gSb4xka7T5VIlJGyfD2FHbNygVzp.svg');
+  background-image: url('SVG/Fermisurf_Cr_bcc_kw650FVx93jQRoyKCYaw7N8Hhemo.svg');
 }
-
 
 
 
@@ -146,24 +145,6 @@ body {
     opacity: 1;
 }
 
-/* 🔸 1K-Displays 
-@media (min-width: 1280px) and (max-width: 1439px) {
-  .card {
-    font-size: 1.1rem;
-    padding: 1.2rem;
-    gap: 1.2rem;
-  }
-}
-
-
-@media (min-width: 1440px) and (max-width: 1919px) {
-  .card {
-    font-size: 1.3rem;
-    padding: 1.5rem;
-    gap: 1.5rem;
-  }
-}
-  */
   @media only screen and (max-width: 600px) {
     .cards {
       grid-template-columns: repeat(1, 1fr);
