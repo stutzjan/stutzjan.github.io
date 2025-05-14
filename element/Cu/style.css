@@ -155,6 +155,11 @@ body {
   padding-top: 10.5cqw;
 }
 
+.card--4 .card__title {
+  padding-bottom: 7cqw;
+  padding-top: 15cqw;
+}
+
   @media only screen and (max-width: 600px) {
     .cards {
       grid-template-columns: repeat(1, 1fr);
