@@ -1,136 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
-    />
-    <title>Interactive Periodic Table</title>
-    <link rel="stylesheet" href="style.css" />
-    <!-- to include the css file -->
-  </head>
-  <body>
-    <section class="cards">
-      <article class="card card--1">
-        <div class="card__img"></div>
-        <a href="Fermisurf_Sc_bcc_PBE_hCKRbe5KrH1EP_L6_voOuBp_WAwL.html" target="_blank" class="card_link">
-          <div class="card__img--hover"></div>
-        </a>
-        <div class="card__info">
-          <span class="card__category">Sc - bcc</span>
-          <h3 class="card__title">Functional: PBE<br />UCV: Å³</h3>
-          <span class="card__by">
-            <a
-              href="https://nomad-lab.eu/prod/v1/gui/search/entries/entry/id/"
-              target="_blank"
-              class="card__author"
-              title="author"
-              >NOMAD</a
-            ></span
-          >
-        </div>
-      </article>
-
-      <article class="card card--2">
-        <div class="card__img"></div>
-        <a href="Fermisurf_Sc_bcc_PBEsol_Y-R8NVd0GFl5RMFBnirUT2yV8VJY.html" target="_blank" class="card_link">
-          <div class="card__img--hover"></div>
-        </a>
-        <div class="card__info">
-          <span class="card__category">Sc - bcc</span>
-          <h3 class="card__title">Functional: PBEsol<br />UCV: Å³</h3>
-          <span class="card__by">
-            <a
-              href="https://nomad-lab.eu/prod/v1/gui/search/entries/entry/id/"
-              target="_blank"
-              class="card__author"
-              title="author"
-              >NOMAD</a
-            ></span
-          >
-        </div>
-      </article>
-
-      <article class="card card--3">
-        <div class="card__img"></div>
-        <a href="Fermisurf_Sc_bcc_PBEsol_Y-R8NVd0GFl5RMFBnirUT2yV8VJY.html" target="_blank" class="card_link">
-          <div class="card__img--hover"></div>
-        </a>
-        <div class="card__info">
-          <span class="card__category">Sc - bcc</span>
-          <h3 class="card__title">Functional: LDA<br />UCV: Å³</h3>
-          <span class="card__by">
-            <a
-              href="https://nomad-lab.eu/prod/v1/gui/search/entries/entry/id/"
-              target="_blank"
-              class="card__author"
-              title="author"
-              >NOMAD</a
-            ></span
-          >
-        </div>
-      </article>
-      
-      <article class="card card--4">
-        <div class="card__img"></div>
-        <a href="Fermisurf_Sc2_hcp_PBE_i242LWiFkBBmHeuAQ5ZyKt0PX8Fz.html" target="_blank" class="card_link">
-          <div class="card__img--hover"></div>
-        </a>
-        <div class="card__info">
-          <span class="card__category">Sc - hcp</span>
-          <h3 class="card__title">Functional: PBE<br />UCV: Å³</h3>
-          <span class="card__by">
-            <a
-              href="https://nomad-lab.eu/prod/v1/gui/search/entries/entry/id/"
-              target="_blank"
-              class="card__author"
-              title="author"
-              >NOMAD</a
-            ></span
-          >
-        </div>
-      </article>
-
-      <article class="card card--5">
-        <div class="card__img"></div>
-        <a href="Fermisurf_Sc2_hcp_PBEsol_WLzlOUQybrdNdFCJOXWXgVQNQNef.html" target="_blank" class="card_link">
-          <div class="card__img--hover"></div>
-        </a>
-        <div class="card__info">
-          <span class="card__category">Sc - hcp</span>
-          <h3 class="card__title">Functional: PBEsol<br />UCV: Å³</h3>
-          <span class="card__by">
-            <a
-              href="https://nomad-lab.eu/prod/v1/gui/search/entries/entry/id/"
-              target="_blank"
-              class="card__author"
-              title="author"
-              >NOMAD</a
-            ></span
-          >
-        </div>
-      </article>
-
-      <article class="card card--6">
-        <div class="card__img"></div>
-        <a href="Fermisurf_Sc2_hcp_n99K6GzXqdem3BwORqD3jt-l-JcK.html" target="_blank" class="card_link">
-          <div class="card__img--hover"></div>
-        </a>
-        <div class="card__info">
-          <span class="card__category">Sc - hcp</span>
-          <h3 class="card__title">Functional: LDA<br />UCV: Å³</h3>
-          <span class="card__by">
-            <a
-              href="https://nomad-lab.eu/prod/v1/gui/search/entries/entry/id/"
-              target="_blank"
-              class="card__author"
-              title="author"
-              >NOMAD</a
-            ></span
-          >
-        </div>
-      </article>
-    </section>
-  </body>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
+  <title>
+   Interactive Periodic Table
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <!-- to include the css file -->
+ </head>
+ <body>
+  <section class="cards">
+   <article class="card card--1">
+    <div class="card__img">
+    </div>
+    <a class="card_link" href="Fermisurf_Sc_bcc_PBE_hCKRbe5KrH1EP_L6_voOuBp_WAwL.html" target="_blank">
+     <div class="card__img--hover">
+     </div>
+    </a>
+    <div class="card__info">
+     <span class="card__category">
+      Sc - bcc
+     </span>
+     <h3 class="card__title">
+      Functional: PBE
+      <br/>
+      UCV: 23.19 Å³
+     </h3>
+     <span class="card__by">
+      <a class="card__author" href="https://nomad-lab.eu/prod/v1/gui/search/entries/entry/id/hCKRbe5KrH1EP_L6_voOuBp_WAwL" target="_blank" title="author">
+       NOMAD
+      </a>
+     </span>
+    </div>
+   </article>
+   <article class="card card--2">
+    <div class="card__img">
+    </div>
+    <a class="card_link" href="Fermisurf_Sc_bcc_PBEsol_Y-R8NVd0GFl5RMFBnirUT2yV8VJY.html" target="_blank">
+     <div class="card__img--hover">
+     </div>
+    </a>
+    <div class="card__info">
+     <span class="card__category">
+      Sc - bcc
+     </span>
+     <h3 class="card__title">
+      Functional: PBEsol
+      <br/>
+      UCV: 23.87 Å³
+     </h3>
+     <span class="card__by">
+      <a class="card__author" href="https://nomad-lab.eu/prod/v1/gui/search/entries/entry/id/Y-R8NVd0GFl5RMFBnirUT2yV8VJY" target="_blank" title="author">
+       NOMAD
+      </a>
+     </span>
+    </div>
+   </article>
+   <article class="card card--3">
+    <div class="card__img">
+    </div>
+    <a class="card_link" href="Fermisurf_Sc_bcc_PBEsol_Y-R8NVd0GFl5RMFBnirUT2yV8VJY.html" target="_blank">
+     <div class="card__img--hover">
+     </div>
+    </a>
+    <div class="card__info">
+     <span class="card__category">
+      Sc - bcc
+     </span>
+     <h3 class="card__title">
+      Functional: LDA
+      <br/>
+      UCV: 23.87 Å³
+     </h3>
+     <span class="card__by">
+      <a class="card__author" href="https://nomad-lab.eu/prod/v1/gui/search/entries/entry/id/Y-R8NVd0GFl5RMFBnirUT2yV8VJY" target="_blank" title="author">
+       NOMAD
+      </a>
+     </span>
+    </div>
+   </article>
+   <article class="card card--4">
+    <div class="card__img">
+    </div>
+    <a class="card_link" href="Fermisurf_Sc2_hcp_PBE_i242LWiFkBBmHeuAQ5ZyKt0PX8Fz.html" target="_blank">
+     <div class="card__img--hover">
+     </div>
+    </a>
+    <div class="card__info">
+     <span class="card__category">
+      Sc - hcp
+     </span>
+     <h3 class="card__title">
+      Functional: PBE
+      <br/>
+      UCV: 49.29 Å³
+     </h3>
+     <span class="card__by">
+      <a class="card__author" href="https://nomad-lab.eu/prod/v1/gui/search/entries/entry/id/i242LWiFkBBmHeuAQ5ZyKt0PX8Fz" target="_blank" title="author">
+       NOMAD
+      </a>
+     </span>
+    </div>
+   </article>
+   <article class="card card--5">
+    <div class="card__img">
+    </div>
+    <a class="card_link" href="Fermisurf_Sc2_hcp_PBEsol_WLzlOUQybrdNdFCJOXWXgVQNQNef.html" target="_blank">
+     <div class="card__img--hover">
+     </div>
+    </a>
+    <div class="card__info">
+     <span class="card__category">
+      Sc - hcp
+     </span>
+     <h3 class="card__title">
+      Functional: PBEsol
+      <br/>
+      UCV: 47.31 Å³
+     </h3>
+     <span class="card__by">
+      <a class="card__author" href="https://nomad-lab.eu/prod/v1/gui/search/entries/entry/id/WLzlOUQybrdNdFCJOXWXgVQNQNef" target="_blank" title="author">
+       NOMAD
+      </a>
+     </span>
+    </div>
+   </article>
+   <article class="card card--6">
+    <div class="card__img">
+    </div>
+    <a class="card_link" href="Fermisurf_Sc2_hcp_n99K6GzXqdem3BwORqD3jt-l-JcK.html" target="_blank">
+     <div class="card__img--hover">
+     </div>
+    </a>
+    <div class="card__info">
+     <span class="card__category">
+      Sc - hcp
+     </span>
+     <h3 class="card__title">
+      Functional: LDA
+      <br/>
+      UCV: 45.07 Å³
+     </h3>
+     <span class="card__by">
+      <a class="card__author" href="https://nomad-lab.eu/prod/v1/gui/search/entries/entry/id/n99K6GzXqdem3BwORqD3jt-l-JcK" target="_blank" title="author">
+       NOMAD
+      </a>
+     </span>
+    </div>
+   </article>
+  </section>
+ </body>
 </html>
